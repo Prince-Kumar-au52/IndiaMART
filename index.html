@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaMART</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .main{
+        width: 80%;
+ 
+        display: flex;
+        align-items: center;
+        
+       
+        background-color:rgb(11, 11, 165);
+        color: white;
+        justify-content: flex-end;
+        
+      }
+      .nav{
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+         background-color:rgb(11, 11, 165) ;
+         position: fixed;
+         top: 0px;
+         
+      }
+      a{
+        color: white;
+        padding-right: 30px;
+        text-decoration: none;
+      }
+      .left img{
+        width: 50%;
+        
+        
+      }
+      .left{
+        width: 20%;
+        background-color:rgb(11, 11, 165) ;
+        color: white;
+        padding:20px
+      }
+      .bottom{
+        width: 100%;
+        height: 400px;
+      }
+      .bottom img{
+     width: 100%;
+     height: 100%;
+      }
+      .show{
+        
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 0px;
+      }
+      .show img{
+        width: 50px;
+        padding-right: 8px;
+      }
+      .show >div{
+        display: flex;
+       padding: 0px 15px 0px 15px;
+        
+      }
+      .btn{
+        border: none;
+        background-color: transparent;
+        font-size: 40px;
+        padding-top: 20px;
+      }
+      #slide{
+        width: 100%;
+        
+        
+        margin-top: 120px;
+        display: flex;
+        font-size: 25px;
+        
+        
+      }
+.slideleft{
+  width: 30%;
+  padding: 20px;
+  
+  
+  
+  
+}
+   .slideright{
+    width: 70%;
+    
+    
+
+   } 
+   .slideright img{
+    height: 100%;
+    width: 100%;
+
+   }
+   .slideleft h2{
+    font-style: italic;
+   }
+   #slideinner{
+    display: flex;
+    justify-content: space-between;
+   }
+
+   #slideinner>div>img{
+    width:50px;
+    
+    margin: 30px 0px 0px 30px;
+   }
+   #out{
+    padding: 20px;
+  
+   }
+   #out h1{
+   padding-left: 30px;
+    font-size: 40px;
+   }
+   #construction{
+    width: 97%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+   }
+   .l{
+    width: 25%;
+   
+    padding-right: 20px;
+    
+   }
+   .l img{
+    width: 100%;
+    height: 100%;
+    
+   }
+   .r{
+    width: 75%;
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+   }
+   .r>div{
+   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    display: grid;
+    grid-template-columns:35% 65%;
+   }
+   .r>div>div{
+  
+    padding-right: 10px;
+   
+   }
+   .r img{
+    width: 100%;
+    padding-top:20px;
+   }
+   #feacher{
+    width: 100%;
+    
+  
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+
+   }
+   .cate{
+    
+    
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+    gap: 20px;
+    
+   }
+   .cate div{
+    width: 100%;
+    padding-bottom: 20px;
+    
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+   }
+   .cate img{
+    width: 50%;
+    height: 120px;
+   }
+   .bttn{
+    padding: 10px 35px 10px 35px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(24, 133, 133);
+    border: none;
+    margin-top: 20px;
+   }
+   .bttm{
+    padding: 10px 35px 10px 35px;
+    border-radius: 20px;
+    font-size: 20px;
+    
+    
+    border: 1px solid blue;
+    margin-top: 20px;
+
+   }
+   #bottompart{
+    width: 100%;
+    
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+   #bottompart>div{
+    padding-top: 40px;
+    padding-left: 40px;
+  
+    
+   }
+   .No>img{
+   width: 70%;
+   }
+   .N>img{
+    padding-left: 80px;
+   }
+   .google{
+    width: 50%;
+   }
+   .input{
+    font-size: 40px;
+   }
+   #footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    
+    
+    gap: 10px;
+    margin-top: 20px;
+   }
+   #footer>div{
+    width: 100%;
+  
+    
+    color: rgb(100, 99, 99);
+    line-height: 10px;
+   }
+   .footerhead{
+    background-color:rgb(245, 240, 240);
+    margin-top: 20px;
+    padding: 2px 0px 2px 170px;
+    
+    color: rgb(33, 116, 226);
+   }
+
+ 
+ 
+
+      
+</style>
+<body>
+    <div class="nav">
+        <div class="left">
+         
+         <img src="https://lh3.googleusercontent.com/y94CuIWP_ttJwMZoyxq2uR5iwkYk0E_Is_8NCp-v0bumpgh1QHgFPqQ2cYvNHHrA3ZIHfVUQbfiu8QjzTmLqadX0RvEai1jE_-H47A" alt="error">
+         </div>
+        <div class="main">
+        <a href="./shoping.html">Shoping</a>
+        <a href="./sell.html">Sell</a>
+        <a href="#">Help</a>
+        <a href="#">Message</a>
+        <a href="./cart.html">card</a>
+        <a href="./login.html">Sign In</a>
+        
+
+        
+        </div>
+        
+      </div>
+      <div class="bottom">
+        <img src="https://thumbs.dreamstime.com/b/shenzhen-china-wal-mart-interior-landscape-display-goods-63389157.jpg" alt="error">
+      
+        <div class="show">
+            <div><img src="https://www.freedommailbox.com/img/svg/business-mailing-address.svg" alt="error">
+            <div><h3>Building & construction</h3></div></div>
+
+            <div><img src="https://www.freedommailbox.com/img/svg/business-mailing-address.svg" alt="error">
+                <div><h3>Electronics & Electrical</h3></div></div>
+
+                <div><img src="https://www.freedommailbox.com/img/svg/business-mailing-address.svg" alt="error">
+                    <div><h3>Drugs & Pharma</h3></div></div>
+
+                    <div><img src="https://www.freedommailbox.com/img/svg/business-mailing-address.svg" alt="error">
+                        <div><h3>Industrial Machinery</h3></div></div>
+
+                        <div><img src="https://www.freedommailbox.com/img/svg/business-mailing-address.svg" alt="error">
+                            <div><h3>Industrial Supplies</h3></div></div> 
+
+                            <div><img src="https://www.freedommailbox.com/img/svg/business-mailing-address.svg" alt="error">
+                                <div><h3>Food & Agriculture</h3></div></div>
+                                
+                                    <div><h3>View All Categories</h3>
+                                    <div><button class="btn">></button></div></div>
+                                  
+           
+           
+        </div>
+   </div>
+
+        <div id="slide">
+          <div class="slideleft">
+            <h2>We connect</h2>
+            <h1>Buyers & Sellers</h1>
+            <h4>IndiaMART is India's largest online B2B marketplace, connecting buyers with suppliers.</h4>
+            <div id="slideinner">
+            <div><img src="https://static.vecteezy.com/system/resources/thumbnails/000/422/459/small/Multimedia__2813_29.jpg" alt="error">
+              <h6>Trusted Platform
+
+              </h6>
+            </div>
+            <div><img src="https://www.shutterstock.com/image-vector/shield-security-protection-260nw-1030006393.jpg" alt="error">
+              <h6>Safe & Secure
+
+              </h6>
+            </div>
+            <div><img src="https://e7.pngegg.com/pngimages/797/571/png-clipart-mobile-phone-information-email-icon-sms-symbol-message-logo-miscellaneous-company.png" alt="error">
+              <h6>Quick Assistance
+            </h6>
+            </div>
+           
+            </div>
+
+          </div>
+          <div class="slideright">
+            <img src="https://hm.imimg.com/imhome_gifs/passion-business.jpg" alt="error">
+
+          </div>
+
+        </div>
+        <div id="out" >
+          <h1>Building Construction Material & Equipment</h1>
+          <div id="construction">
+          <Div class="l"><img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVpbGRpbmclMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8&w=1000&q=80" alt="error"></Div>
+          <Div class="r">
+            <div>
+              <div><img src="https://3.imimg.com/data3/RS/UH/GLADMIN-5385/brick-making-machines-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Brick Making Machines</h2>
+            <p>Fly Ash Brick Making Machine</p>
+          <p>Clay Brick Making Machine</p>
+        <p>Cement Brick Making Machine</p>
+      </div>
+          </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/OI/XL/GLADMIN-34562/passenger-lifts-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Passenger Lifts</h2>
+              <p>Residential Elevator</p>
+              <p>Kone Passenger lift</p>
+              <p>Stair Lift</p>
+            </div>
+          </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/KS/JQ/GLADMIN-2475/tmt-bars-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>TMT Bars</h2>
+                <p>TMT Steel Bars</p>
+                <p>TATA TMT Bars</p>
+                <p>Kamdhenu TMT Bars</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/QO/YD/GLADMIN-2/plywoods-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Plywoods</h2>
+                <p>Shuttering Plywood</p>
+                <p>Laminated Plywood</p>
+                <p>Waterproof Plywood</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/JE/DA/MY-2/hydraulic-excavator-500x500-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Excavator</h2>
+                <p>Hitachi Excavator</p>
+                <p>Hyundai Excavator</p>
+                <p>Komatsu Excavator</p>
+              </div>
+            </div>
+            <div>
+              <div> <img src="https://3.imimg.com/data3/VG/QG/GLADMIN-27799/emulsion-paints-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Emulsion Paints</h2>
+                <p>Asian Emulsion Paints</p>
+                <p>Berger Emulsion Paints</p>
+                <p>Nerolac Emulsion Paints</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/UT/PB/GLADMIN-12558/wood-door-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Wooden Door</h2>
+                <p>Designer Wooden Door</p>
+                <p>Plywood Door</p>
+                <p>Wooden Flush Doors</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/VN/LA/GLADMIN-2047/pvc-pipes-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>PVC Pipes</h2>
+                <p>Finolex Pipes</p>
+                <p>Rigid PVC Pipes</p>
+                <p>Flexible PVC Pipes</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/YD/WE/GLADMIN-23639/building-brick-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Building Brick</h2>
+                <p>Red Brick</p>
+                <p>Fly Ash Bricks</p>
+                <p>Cement Brick</p>
+              </div>
+            </div>
+          </Div>
+          
+</div>
+        </div>
+        <div id="out" >
+          <h1>Electronics & Electrical Goods & Supplies</h1>
+          <div id="construction">
+          <Div class="l"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOvjCGoix8Y8n8LaU0PVPRf7kQNqCV-c45Q&usqp=CAU" alt="error"></Div>
+          <Div class="r">
+            <div>
+              <div><img src="https://4.imimg.com/data4/HI/RA/GLADMIN-181283/photocopier-machine-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Office Automation Products</h2>
+            <p>Multifunction Printer</p>
+          <p>Xerox Machines</p>
+        <p>Fingerprint Scanners</p>
+      </div>
+          </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/GLADMIN/Default/2022/3/MZ/VG/IH/87924/arduino-sensor-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Sensors & Transducers</h2>
+              <p>Level Sensors</p>
+              <p>Proximity Sensor</p>
+              <p>Sensor for Home & Office Load Cell</p>
+              
+            </div>
+          </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/JW/EX/GLADMIN-2/digital-controller-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Process Controllers</h2>
+                <p>Level Controllers</p>
+                <p>Motor Controllers</p>
+                <p>Temperature Controller</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/RO/JS/GLADMIN-2/lighting-controllers1-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Control & Automation</h2>
+                <p>VFD</p>
+                <p>PLC</p>
+                <p>HMI</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/XB/KH/GLADMIN-105874/light-emitting-diode-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Diodes & Active Devices</h2>
+                <p>Integrated Circuits</p>
+                <p>Thyristors</p>
+                <p>Light Emitting Diode</p>
+              </div>
+            </div>
+            <div>
+              <div> <img src="https://5.imimg.com/data5/GLADMIN/Default/2022/6/SI/KH/VT/87924/house-wire-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Wires & Cables</h2>
+                <p>House Wire</p>
+                <p>Armoured Cable</p>
+                <p>Power Cable</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/VB/IL/GLADMIN-2/street-light-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Commercial Lights</h2>
+                <p>Flood Lights</p>
+                <p>Street Lights</p>
+                <p>Panel Light</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/LX/YW/GLADMIN-2/inverter-batteries-125x125.png" alt="error"></div>
+              <div>
+                <h2>Battries</h2>
+                <p>Lithium Battery</p>
+                <p>Inverter Batteries</p>
+                <p>Electric Vehicle Battery</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/EX/HO/GLADMIN-37340/solar-power-systems-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Solar & Renewable Energy</h2>
+                <p>Solar Panels</p>
+                <p>Solar Inverter</p>
+                <p>Solar Pumps</p>
+              </div>
+            </div>
+          </Div>
+          
+</div>
+        </div>
+        <div id="out" >
+          <h1>Pharmaceutical Drug, Medicine, Medical Care & Consultation</h1>
+          <div id="construction">
+          <Div class="l"><img src="https://keralakaumudi.com/web-news/en/2022/09/NMAN0359911/image/medicine-.1.1810106.jpg" alt="error"></Div>
+          <Div class="r">
+            <div>
+              <div><img src="https://5.imimg.com/data5/KT/MJ/MY-16675294/pharmaceutical-drug-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Pharmaceutical Drug</h2>
+            <p>Anticoagulant and Antiplatelet Drugs</p>
+          <p>Antiparasitic Drug</p>
+        <p>Antibiotic Tablets, Capsule & Syrup</p>
+        <p>Antifungal Injection, Tablet & Syrup</p>
+      </div>
+          </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/JR/DH/GLADMIN-7427/nutritional-supplements-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Nutraceuticals</h2>
+              <p>Vitamin Tablets & Capsules</p>
+              <p>Weight Loss Supplement</p>
+              <p>Dietary Supplements</p>
+              <p>Mineral Supplement</p>
+              
+            </div>
+          </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/PQ/HW/MY-7191707/thinq-mass-gainer-282-lbs-29-125x125.png" alt="error"></div>
+              <div>
+                <h2>Fitness Supplements</h2>
+                <p>Weight Gain Nutrition</p>
+                <p>Weight Gain Capsule</p>
+                <p>Pre workout Supplements</p>
+                <p>Immune Booster</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/BA/YT/MY-2018319/multidisciplinary-care-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Medical Treatment Services</h2>
+                <p>Dental Treatment Services</p>
+                <p>Medical Surgery Services</p>
+                <p>Eye Treatment</p>
+                <p>Plastic Surgery Services</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/JM/MB/MY-4222986/8-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Medical Test Services</h2>
+                <p>CT Scan Services</p>
+                <p>Ultrasound Services</p>
+                <p>ECHO Cardiography</p>
+                <p>Blood Testing</p>
+              </div>
+            </div>
+            <div>
+              <div> <img src="https://5.imimg.com/data5/YC/QB/MY-3773531/allopathic-pcd-pharma-franchise-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>PCD Pharma Franchise</h2>
+                <p>Pharma Franchise</p>
+                <p>Allopathic PCD Pharma Franchise</p>
+                <p>Ayurvedic PCD Pharma Franchise</p>
+                <p>Veterinary PCD Pharma Franchise</p>
+              </div>
+            </div>
+           
+          
+</div>
+        </div>
+        <div id="out" >
+          <h1>Hospital and Medical Equipment</h1>
+          <div id="construction">
+          <Div class="l"><img src="https://upload.echemi.com/2019/0715/1563157203533.jpg" alt="error"></Div>
+          <Div class="r">
+            <div>
+              <div><img src="https://hm.imimg.com/imhome_gifs/cvid09.png" alt="error"></div>
+            <div>
+              <h2>Medical Laboratory Instruments</h2>
+            <p>Rapid Test Kit</p>
+          <p>Biochemistry Analyzer</p>
+        <p>Blood Bank Equipments</p>
+        <p>Hematology Analyzers</p>
+      </div>
+          </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/IW/EI/MY-3076857/patient-monitoring-system-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Patient Monitoring Systems</h2>
+              <p>Blood Pressure Machine</p>
+              <p>Capnometer</p>
+              <p>Medical Monitor</p>
+              <p>Surgical Monitor</p>
+              
+            </div>
+          </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/NT/KF/MY-1383163/infrared-thermometer-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Thermometer</h2>
+                <p>Infrared Thermometer</p>
+                <p>Forehead Thermometer</p>
+                <p>Non Contact Thermometer</p>
+                <p>Digital Thermometers</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/CM/CP/JH/SELLER-5038493/neonatal-portable-icu-ventilator-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Medical Imaging Machine</h2>
+                <p>X Ray Machine</p>
+                <p>Ultrasound Machines</p>
+                <p>ECG Machine</p>
+                <p>Doppler Machine</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/OQ/SV/MY-905156/stethoscope-cardio-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Stethoscope</h2>
+                <p>Cardiology Stethoscope</p>
+                <p>Dual Head Stethoscope</p>
+                <p>Electronic Stethoscope</p>
+                <p>Pediatric Stethoscope</p>
+              </div>
+            </div>
+            <div>
+              <div> <img src="https://5.imimg.com/data5/NU/ZZ/AQ/SELLER-35236796/electric-suction-unit-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Suction Machine</h2>
+                <p>Electric Suction Unit</p>
+                <p>Foot Operated Suction Unit</p>
+                <p>Liposuction Machine</p>
+                <p>Central Suction System</p>
+              </div>
+            </div>
+           
+          
+</div>
+        </div>
+        <div id="out" >
+          <h1>Food, Agriculture & Farming</h1>
+          <div id="construction">
+          <Div class="l"><img src="https://www.agmrc.org/media/cms/fruit_3F888C649E704.jpg" alt="error"></Div>
+          <Div class="r">
+            <div>
+              <div><img src="https://3.imimg.com/data3/IS/MS/GLADMIN-105901/rice-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Rice</h2>
+            <p>Basmati Rice</p>
+          <p>Kolam Rice</p>
+        <p>Ponni Rice</p>
+        <p>Sona Masoori Rice</p>
+      </div>
+          </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/JQ/XB/GLADMIN-3396/wheat-125x125.jpg" alt="error"></div>
+            <div>
+              <h2>Wheat</h2>
+              <p>Wheat Grains</p>
+              <p>Milling Wheat</p>
+              <p>Lokwan Wheat</p>
+            </div>
+          </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/QL/BL/GLADMIN-1571/pulses-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Pulses</h2>
+                <p>Toor Dal</p>
+                <p>Chana Dal</p>
+                <p>Urad Dal</p>
+              <p>Moong Dal</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://3.imimg.com/data3/QL/BL/GLADMIN-1571/pulses-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Fresh Vegetables</h2>
+                <p>Potato</p>
+                <p>Onion</p>
+                <p>Tomato</p>
+                <p>Mushroom</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/LO/QY/EQ/SELLER-84813594/garam-masala-powder-500x500.jpg" alt="error"></div>
+              <div>
+                <h2>Whole Spices</h2>
+                <p>Green Cardamom</p>
+                <p>Black Pepper</p>
+                <p>Cardamom</p>
+                <p>Turmeric</p>
+              </div>
+            </div>
+            <div>
+              <div> <img src="https://5.imimg.com/data5/QK/BB/TN/SELLER-5388819/pumpkin-seeds-2--125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Seeds</h2>
+                <p>Vegetable Seeds</p>
+                <p>Hybrid Seeds</p>
+                <p>Seed Spices</p>
+                <p>Oil Seeds</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/OP/LS/MY-1393371/mono-potassium-phosphate-foliar-fertilizers-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Fertilizer</h2>
+                <p>Organic Fertilizers</p>
+                <p>Bio Fertilizers</p>
+                <p>Vermicompost</p>
+                <p>NPK Fertilizer</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/KJ/GZ/SN/SELLER-11596263/alpler-disc-plough-125x125.jpg" alt="error"></div>
+              <div>
+                <h2>Agricultural Tools</h2>
+                <p>Agricultural Sprayers</p>
+                <p>Agricultural Plough</p>
+                <p>Disc Harrow</p>
+                <p>Land Leveler</p>
+              </div>
+            </div>
+            <div>
+              <div><img src="https://5.imimg.com/data5/ML/AA/SC/SELLER-4060804/manual-power-weeder-125x125.png" alt="error"></div>
+              <div>
+                <h2>Agricultural Machinery</h2>
+                <p>Brush Cutters</p>
+                <p>Chain Saw</p>
+                <p>Power Weeder</p>
+                <p>Power Tiller</p>
+              </div>
+            </div>
+          </Div>
+          
+</div>
+        </div>
+        
+        <div id="feacher">
+          <h1>Featured Categories</h1>
+          <div class="cate">
+            <div>
+              <img src="https://5.imimg.com/data5/GLADMIN/Default/2022/6/CE/SS/XZ/92368/wheat-125x125.jpg" alt="error">
+              <h2>Wheat</h2>
+              <button class="bttn">Get Quotes</button>
+            </div>
+            <div>
+              <img src="https://5.imimg.com/data5/GLADMIN/Default/2022/6/BW/IC/KN/94069/stethoscope-125x125.jpg" alt="error">
+              <h2>Stethoscope</h2>
+              <button class="bttn">Get Quotes</button>
+            </div>
+            <div>
+              <img src="https://3.imimg.com/data3/FM/DL/GLADMIN-31884/medical-imaging-systems-125x125.jpg" alt="error">
+              <h2>Medical Imaging Machine </h2>
+              <button class="bttn">Get Quotes</button>
+            </div>
+            <div>
+              <img src="https://3.imimg.com/data3/DA/US/GLADMIN-5787/patient-monitoring-devices-125x125.jpg" alt="error">
+             <h2>Patient Monitoring System</h2>
+              <button class="bttn">Get Quotes</button>
+            </div>
+            <div>
+              <img src="https://5.imimg.com/data5/GLADMIN/Default/2022/6/LP/NU/UN/43668/pharmaceutical-drug-125x125.jpeg" alt="error">
+              <h2>Pharmaceutical Drug</h2>
+              <button class="bttn">Get Quotes</button>
+            </div>
+
+
+          </div>
+        </div>
+        <div id="feacher">
+          <h1>Featured Recommendations</h1>
+          <div class="cate">
+            <div>
+              <img src="https://5.imimg.com/data5/ANDROID/Default/2022/6/AI/FW/RF/29271581/product-jpeg-125x125.jpg" alt="error">
+              <h2>Medicinal Purple Wheat</h2>
+              <p>Rs 50/Kg</p>
+              <p>By Nandini Agro & Farming Company</p>
+              <button class="bttn">Get Best Price</button>
+            </div>
+            <div>
+              <img src="https://5.imimg.com/data5/PY/YS/MY-19500807/medical-stethoscope-125x125.jpg" alt="error">
+              <h2>3M Littmann Stethoscope</h2>
+              <p>Rs 6500/Piece </p>
+              <p>By Manohar Healthcare</p>
+              <button class="bttn">Get Best Price</button>
+            </div>
+            <div>
+              <img src="https://5.imimg.com/data5/SELLER/Default/2021/11/CM/UU/VK/2653255/uv-transilluminator-research-125x125.jpg" alt="error">
+              <h2>UV Transilluminator  </h2>
+              <p>Rs 44700/Picece</p>
+              <p>By EPS Biosolitions</p>
+              <p></p>
+              <button class="bttn">Get Best Price</button>
+            </div>
+            <div>
+              <img src="https://5.imimg.com/data5/ANDROID/Default/2022/5/MQ/HL/NN/37274499/product-jpeg-125x125.jpg" alt="error">
+             <h2>Wheat</h2>
+             <p>Rs 22/Kg</p>
+             <p>By AJ Merketing</p>
+              <button class="bttn">Get Best Price</button>
+            </div>
+            <div>
+              <img src="https://4.imimg.com/data4/XE/VG/MY-4480/smart-care-stethoscope-classic-2-125x125.png" alt="error">
+              <h2>Smart Care Stethoscope </h2>
+              <p>Rs 1213/Pieces</p>
+              <p>By Saify Traders</p>
+              <button class="bttn">Get Best Price</button>
+            </div>
+
+
+          </div>
+        </div>
+        
+
+        <div id="feacher">
+          <h1>More for You</h1>
+          <div class="cate">
+            <div>
+              <img src="https://cdn-icons-png.flaticon.com/512/1260/1260021.png" alt="error">
+              <h2>Connect with verified sellers</h2>
+            
+              <p>Tell us your requirement & let our experts find verified sellers for you</p>
+              <button class="bttm">Get Verified </button>
+            </div>
+            <div>
+              <img src="https://thumbs.dreamstime.com/b/rupee-sign-icon-long-shadow-thin-line-website-design-development-app-premium-white-background-140308309.jpg" alt="error">
+              <h2>Pay with IndiaMART</h2>
+              
+              <p>Protect your payments for FREE. Pay sellers online via multiple options</p>
+              <button class="bttm">Know More</button>
+            </div>
+            <div>
+              <img src="https://img.freepik.com/premium-vector/shopping-store-kiosk-vector-line-icon-commercial-building-sale-products-things_92753-6365.jpg?w=740" alt="error">
+              <h2>Sell on IndiaMART for free  </h2>
+              
+              <p>Reach out to more than 4 crore buyers. for bye from indiaMart</p>
+              
+            
+              <button class="bttm">Start Selling</button>
+            </div>
+            <div>
+              <img src="https://cdn-icons-png.flaticon.com/512/6750/6750965.png" alt="error">
+             <h2>Download our App</h2>
+             <p>Get instant notifications on the go. Download our App Now</p>
+             
+              <button class="bttm">Download Now</button>
+            </div>
+            <div>
+              <img src="https://cdn-icons-png.flaticon.com/512/6750/6750965.png" alt="error">
+              <h2>Tally on Mobile </h2>
+              <p>With Live Keeping, SME’s can now connect their Tally offline data to mobile app</p>
+              
+              <button class="bttm">Know More</button>
+            </div>
+
+
+          </div>
+        </div>
+        <div id="bottompart">
+          <div>
+            <img src="https://hm.imimg.com/template-mdc/busy_indiamart_logo.png" alt="error">
+            <h1>Accounting Software</h1>
+            <h5>Trusted by 3,60,000+ Small Businesses across different domains</h5>
+            <li>GST Accounting Software</li>
+            <li>e-Invoice Software</li>
+            <li>Inventory Management Software</li>
+            <li>e-Way Billing Software</li>
+            
+
+          </div>
+          <div class="No"><img src="https://hm.imimg.com/template-mdc/as_img.png" alt="error"></div>
+        </div>
+        <div id="bottompart">
+          <div class="N">
+            <img src="https://hm.imimg.com/imhome_gifs/app-img.png" alt="error">
+            </div>
+          <div>
+            <h1>Get IndiaMART App</h1>
+            <p>Search for products/services and connect with verified sellers on the go!</p>
+            <input class="input"
+            type="Nummber" placeholder="Inter Mobile Number">
+            <p>We will send you a link, open it on your phone to download the App</p>
+            <img  class="google"
+            src="https://www.seekpng.com/png/detail/20-202991_get-it-on-google-play-logo-png-vector.png" alt="error">
+          </div>
+        </div>
+        <div  class="footerhead"><h2>We are here to help you!</h2></div>
+        
+        <div id="footer">
+          <div></div>
+          <div>
+            <p>About Us</p>
+            <p>Jion Sates</p>
+            <p>Success Stories</p>
+            <p>Press Section </p>
+            <p>Advertise with Us</p>
+            <p>Investor Section</p>
+          </div>
+          <div>
+          <p>Help</p>
+          <p>Feedback</p>
+          <p>Complaints</p>
+          <p>Customer Care</p>
+          <p>Joints & Careers</p>
+          <p>Contact Us</p>
+        </div>
+          <div>
+            <h3>Supplier Tool Kit</h3>
+            <p>Sell on indiaMART</p>
+            <p>Latest BuyLead</p>
+            <p>Learning Centre</p>
+            <p>Ship With indiaMART</p>
+            
+
+          </div>
+          <div>
+            <h3>Buyers Tool Kit</h3>
+            <p>Post Yuor Requrement</p>
+            <p>Products You Buy</p>
+            <p>Search Products & Suppliyes</p>
+            <p>Pay With indiaMART</p>
+
+          </div>
+          <div>
+            <h3>According Solution</h3>
+            <p>According Software</p>
+            <p>Tally on Mobile</p>
+            <p>GST e-invoice </p>
+          </div>
+          <div></div>
+
+        </div>
+       
+       
+</body>
+</html>

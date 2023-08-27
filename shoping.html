@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shopping</title>
+    
+    <style>
+      /* Write all necessery css here  */
+
+      #product-container {
+        /* border: 2px solid red; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+      }
+      #product-container > div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+      }
+      #product-container > div > img {
+        width: 100%;
+        height: 200px;
+      }
+      #product-container > div > button {
+        display: block;
+        margin: auto;
+      }
+
+      #filter {
+        display: block;
+        margin: auto;
+        font-size: 15px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #new{
+        width: 95%;
+        
+        margin:auto;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      #new>img{
+        width: 100%;
+      }
+     
+    </style>
+  </head>
+
+  <body>
+  
+   
+    <select id="filter">
+      <option value="">Filter By Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="Speakers">Speakers</option>
+    </select>
+    <div id="new">
+        <img src="https://shopping.imimg.com/style/bnr_D.webp" alt="error">
+
+    </div>
+    <div id="new">
+        <img src="https://shopping.imimg.com/style/stmbnr_D1.webp" alt="error">
+
+    </div>
+    <div id="product-container">
+     
+
+    </div>
+  </body>
+  <script src="shoping.js"></script>
+</html>
